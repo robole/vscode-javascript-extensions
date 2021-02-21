@@ -1,0 +1,22 @@
+{
+  "name": "example",
+  "displayName": "Status Bar Example",
+  "description": "Shows the number of selected lines in the status bar",
+  "version": "0.0.1",
+  "publisher": "jdoe",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "src/extension.js",
+  "scripts": {},
+  "devDependencies": {
+    "@types/vscode": "^1.32.0",
+    "eslint": "^7.1.0"
+  }
+}

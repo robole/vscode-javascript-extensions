@@ -1,0 +1,31 @@
+{
+  "name": "example",
+  "displayName": "Doc Editing Example",
+  "description": "Reverse selected text.",
+  "version": "0.0.1",
+  "publisher": "robole",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:example.reverseText"
+  ],
+  "main": "src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "example.reverseText",
+        "title": "Reverse Selected Text"
+      }
+    ]
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@types/node": "^12.12.0",
+    "eslint": "^7.1.0",
+    "@types/vscode": "^1.32.0"
+  }
+}
