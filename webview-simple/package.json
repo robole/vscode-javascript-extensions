@@ -1,0 +1,26 @@
+{
+  "name": "example",
+  "description": "A Webview Example",
+  "version": "0.0.1",
+  "publisher": "jdoe",
+  "engines": {
+    "vscode": "^1.47.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:example.show"
+  ],
+  "main": "src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "example.show",
+        "title": "Show example webview"
+      }
+    ]
+  },
+  "scripts": {},
+  "devDependencies": {}
+}

@@ -4,7 +4,7 @@ VS Code JavaScript Extension Examples
 
 This repository contains **example extensions written in JavaScript**.
 
-The VS Code docs examples are written in TypeScript (found in [https://github.com/microsoft/vscode-extension-examples](https://github.com/microsoft/vscode-extension-examples)). This repo is to provide a JavaScript alternative to these.
+The VS Code docs examples are written in TypeScript (found in [https://github.com/microsoft/vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples)). This repo is to provide a JavaScript alternative to these.
 
 Each folder contains a complete extension that explains one topic from the [VS Code API](https://code.visualstudio.com/api/references/vscode-api) or VS Code's [Contribution Points](https://code.visualstudio.com/api/references/contribution-points).
 
@@ -18,13 +18,13 @@ You can expect the following from each example:
 
 You need to have [Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) installed on your system to run the examples. It is recommended to use the Node version used for VS Code which is documented [here](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#prerequisites).
 
-<u>No dev dependencies are required</u> for building extensions.
+<u>No dev dependencies are required</u> for building extensions. By default, Node and the VS Code API is available to use in an extension.
 
 ## Usage
 
 1. Clone this repo. Run `git clone https://github.com/robole/vscode-extension-examples` on the command-line.
 1. Open a specific extension example folder in VS Code. You can run `code <example-folder>` on the command-line.
-1. Run `npm install` in the terminal to install all node dependencies for the extension.
+1. Run `npm install` in the terminal to install all node dependencies for the extension. Most of these examples do not require any dependencies.
 1. Launch the extension. If there is an existing configuration in `.vscode/launch.json`, you can press `F5` (or select `Run > Start Debugging` from the main menu) to launch the extension in debug mode. If there is no launch config, open the main module (`extension.js`) and press `F5`. You will be prompted to select an Environment - select "VS Code Development Environment". A new VS Code Window will be opened with the extension loaded.
 
 ## Getting Started
@@ -37,32 +37,52 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 
 ### Hello World Minimal
 
-Basic example that shows an information message that says "Hello World!". It has the absolute minimum code required for simplicity sake.
+ ![screenshot](helloworld-minimal/screenshot.png)
 
-![demo](helloworld-minimal/demo.gif)
-
-See folder [helloworld-minimal](#helloworld-minimal).
-
-### Document Editing
-
-This example shows you how to create a command that makes changes in a document (of the active text editor). It reverses selected text.
-
-![demo](document-editing/img/demo.gif)
-
-See folder [document-editing](#document-editing).
-
-### Progress Task
-
-This extension shows a progress task in the notification area.
-
-![demo](progress/img/demo.gif)
-
-See folder [progress](#progress).
+- **Description**: Basic example that shows an information message that says "Hello World!". It pop ups in the bottom right corner.
+- **API Referenced**:
+	- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage) 
+- **Folder**: [helloworld-minimal](#helloworld-minimal).
 
 ### Status Bar
 
-This extension shows a status bar item that shows how many lines are selected in the active text editor.
+![screenshot](statusbar/img/screenshot.png)
 
-![demo](statusbar/img/demo.gif)
+- **Description**: Add item to status bar (the bar at the very bottom of the window). Clicking on the item executes a command.
+- **API Referenced**:
+	- [`window.createStatusBarItem`](https://code.visualstudio.com/api/references/vscode-api#window.createStatusBarItem)
+- **Folder**: [statusbar](#statusbar).
 
-See folder [statusbar](#statusbar).
+### Progress
+
+![screenshot](progress/img/screenshot.png)
+
+- **Description**: Show progress message for a running task. It pop ups in the bottom right corner.
+- **API Referenced**:
+	- [`window.withProgress`](https://code.visualstudio.com/api/references/vscode-api#window.withProgress)
+- **Folder**: [progress](#progress).
+
+### Document Editing
+
+- **Description**: Makes changes to text in a document (of the active text editor). The examples reverses selected text.
+- **API Referenced**:
+	- [`window.activeTextEditor`](https://code.visualstudio.com/api/references/vscode-api#window.activeTextEditor)
+	- [`TextDocument.getText`](https://code.visualstudio.com/api/references/vscode-api#TextDocument.getText)
+	- [`TextEditor.edit`](https://code.visualstudio.com/api/references/vscode-api#TextEditor.edit)
+- **Folder**: [document-editing](#document-editing).
+
+### Webview Simple
+
+![screenshot](webview-simple/img/screenshot.png)
+
+- **Description**: A simple example of a webview.
+- **API Referenced**:
+	- - [`window.createWebviewPanel`](https://code.visualstudio.com/api/references/vscode-api#window.createWebviewPanel)
+- **Official Guide**: [Webview guide](https://code.visualstudio.com/api/extension-guides/webview).
+- **Folder**: [webview-simple](#webview-simple).
+
+### Make a contribution
+
+If you are interested in adding an example, feel free to make a Pull Request. I prefer simpler examples with clean code. If there is a simple example for a particular part of the API, a more advanced example is good also.
+
+I refactored some of some examples from [https://github.com/microsoft/vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples). You could do the same if you wish.

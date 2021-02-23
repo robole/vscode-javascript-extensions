@@ -1,0 +1,27 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* some of the user settings are available as CSS variables on the HTML element */
+body {
+  font-size: var(--vscode-font-size);
+  font-weight: var(--vscode-font-weight);
+  font-family: var(--vscode-font-family);
+  background-color: var(--vscode-editor-background);
+}
+
+img {
+  width: 100%;
+  max-width: 300px;
+}
+
+a {
+  color: var(--vscode-textLink-foreground);
+}
+
+a:hover,
+a:active {
+  color: var(--vscode-textLink-activeForeground);
+}
