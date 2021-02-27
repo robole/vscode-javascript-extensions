@@ -1,0 +1,23 @@
+{
+  "name": "example",
+  "publisher": "jdoe",
+  "displayName": "Treeview Example",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.47.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "src/extension.js",
+  "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "exampleTreeview",
+          "name": "My Treeview"
+        }
+      ]
+    }
+  }
+}

@@ -15,8 +15,5 @@
   ],
   "main": "src/extension.js",
   "scripts": {},
-  "devDependencies": {
-    "@types/vscode": "^1.32.0",
-    "eslint": "^7.1.0"
-  }
+  "devDependencies": {}
 }

@@ -2,6 +2,8 @@
 VS Code JavaScript Extension Examples
 </h1>
 
+![banner](banner.png)
+
 This repository contains **example extensions written in JavaScript**.
 
 The VS Code docs examples are written in TypeScript (found in [https://github.com/microsoft/vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples)). This repo is to provide a JavaScript alternative to these.
@@ -11,8 +13,8 @@ Each folder contains a complete extension that explains one topic from the [VS C
 You can expect the following from each example:
 - An explanation of its functionality
 - A gif or screenshot demonstrating its usage
-- Link to a guide on VS Code website, if it has one
 - Listing of used VS Code API and Contribution Points
+- Link to a guide on VS Code website, if it has one
 
 ## Prerequisites
 
@@ -40,16 +42,24 @@ I have added a minimal example of the boilerplate project the guide uses. It may
  ![screenshot](helloworld-minimal/screenshot.png)
 
 - **Description**: Basic example that shows an information message that says "Hello World!". It pop ups in the bottom right corner.
-- **API Referenced**:
+- **API References**:
 	- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage) 
 - **Folder**: [helloworld-minimal](#helloworld-minimal).
 
+### Document Editing
+
+- **Description**: Makes changes to text in a document (of the active text editor). The examples reverses selected text.
+- **API References**:
+	- [`window.activeTextEditor`](https://code.visualstudio.com/api/references/vscode-api#window.activeTextEditor)
+	- [`TextDocument.getText`](https://code.visualstudio.com/api/references/vscode-api#TextDocument.getText)
+	- [`TextEditor.edit`](https://code.visualstudio.com/api/references/vscode-api#TextEditor.edit)
+- **Folder**: [document-editing](#document-editing).
 ### Status Bar
 
 ![screenshot](statusbar/img/screenshot.png)
 
 - **Description**: Add item to status bar (the bar at the very bottom of the window). Clicking on the item executes a command.
-- **API Referenced**:
+- **API References**:
 	- [`window.createStatusBarItem`](https://code.visualstudio.com/api/references/vscode-api#window.createStatusBarItem)
 - **Folder**: [statusbar](#statusbar).
 
@@ -58,30 +68,34 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 ![screenshot](progress/img/screenshot.png)
 
 - **Description**: Show progress message for a running task. It pop ups in the bottom right corner.
-- **API Referenced**:
+- **API References**:
 	- [`window.withProgress`](https://code.visualstudio.com/api/references/vscode-api#window.withProgress)
 - **Folder**: [progress](#progress).
 
-### Document Editing
+### Treeview Simple
 
-- **Description**: Makes changes to text in a document (of the active text editor). The examples reverses selected text.
-- **API Referenced**:
-	- [`window.activeTextEditor`](https://code.visualstudio.com/api/references/vscode-api#window.activeTextEditor)
-	- [`TextDocument.getText`](https://code.visualstudio.com/api/references/vscode-api#TextDocument.getText)
-	- [`TextEditor.edit`](https://code.visualstudio.com/api/references/vscode-api#TextEditor.edit)
-- **Folder**: [document-editing](#document-editing).
+![screenshot](treeview-simple/img/screenshot.png)
+
+- **Description**: A simple example of a treeview that shows a list of users. It is added to the **Explorer** view container.
+- **API References**:
+	- [window.createTreeView](https://code.visualstudio.com/api/references/vscode-api#window.createTreeView)
+	- [TreeView](https://code.visualstudio.com/api/references/vscode-api#TreeView)
+	- [TreeItem](https://code.visualstudio.com/api/references/vscode-api#TreeItem)
+	- [TreeDataProvider](https://code.visualstudio.com/api/references/vscode-api#TreeDataProvider)
+- **Official Guide**: The [Treeview guide](https://code.visualstudio.com/api/extension-guides/treeview) covers a more complicated example.
+- **Folder**: [treeview-simple](#treeview-simple).
 
 ### Webview Simple
 
 ![screenshot](webview-simple/img/screenshot.png)
 
 - **Description**: A simple example of a webview.
-- **API Referenced**:
-	- - [`window.createWebviewPanel`](https://code.visualstudio.com/api/references/vscode-api#window.createWebviewPanel)
-- **Official Guide**: [Webview guide](https://code.visualstudio.com/api/extension-guides/webview).
+- **API References**:
+	- [`window.createWebviewPanel`](https://code.visualstudio.com/api/references/vscode-api#window.createWebviewPanel)
+- **Official Guide**: [Webview guide](https://code.visualstudio.com/api/extension-guides/webview) covers a more complicated example.
 - **Folder**: [webview-simple](#webview-simple).
 
-### Make a contribution
+## Make a contribution
 
 If you are interested in adding an example, feel free to make a Pull Request. I prefer simpler examples with clean code. If there is a simple example for a particular part of the API, a more advanced example is good also.
 
