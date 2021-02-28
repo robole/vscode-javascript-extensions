@@ -1,0 +1,31 @@
+{
+  "name": "example",
+  "displayName": "Quickpick Example",
+  "version": "0.0.1",
+  "publisher": "jdoe",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:example.quickpickBasic",
+    "onCommand:example.quickpickMany"
+  ],
+  "main": "src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "example.quickpickBasic",
+        "title": "Show Basic Quickpick"
+      },
+      {
+        "command": "example.quickpickMany",
+        "title": "Show Multi Quickpick"
+      }
+    ]
+  },
+  "scripts": {},
+  "devDependencies": {}
+}

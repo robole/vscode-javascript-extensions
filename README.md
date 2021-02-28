@@ -1,12 +1,10 @@
-<h1 align="center">
-VS Code JavaScript Extension Examples
-</h1>
+<h1 align="center">VS Code Extension Examples</h1>
 
 ![banner](banner.png)
 
 This repository contains **example extensions written in JavaScript**.
 
-The VS Code docs examples are written in TypeScript (found in [https://github.com/microsoft/vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples)). This repo is to provide a JavaScript alternative to these.
+The VS Code docs examples are written in TypeScript (found in [https://github.com/microsoft/vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples)). The purpose of this repo is to provide clear, simple JavaScript alternatives to these.
 
 Each folder contains a complete extension that explains one topic from the [VS Code API](https://code.visualstudio.com/api/references/vscode-api) or VS Code's [Contribution Points](https://code.visualstudio.com/api/references/contribution-points).
 
@@ -20,7 +18,7 @@ You can expect the following from each example:
 
 You need to have [Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) installed on your system to run the examples. It is recommended to use the Node version used for VS Code which is documented [here](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#prerequisites).
 
-<u>No dev dependencies are required</u> for building extensions. By default, Node and the VS Code API is available to use in an extension.
+<u>No dev dependencies are required for building extensions.</u>  By default, Node and the VS Code API is available to use in an extension.
 
 ## Usage
 
@@ -54,6 +52,7 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 	- [`TextDocument.getText`](https://code.visualstudio.com/api/references/vscode-api#TextDocument.getText)
 	- [`TextEditor.edit`](https://code.visualstudio.com/api/references/vscode-api#TextEditor.edit)
 - **Folder**: [document-editing](#document-editing).
+
 ### Status Bar
 
 ![screenshot](statusbar/img/screenshot.png)
@@ -71,6 +70,21 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 - **API References**:
 	- [`window.withProgress`](https://code.visualstudio.com/api/references/vscode-api#window.withProgress)
 - **Folder**: [progress](#progress).
+
+### Quickpick Simple
+
+######  Single Selection Quickpick
+![screenshot](quickpick-simple/img/basic-screenshot.png)
+
+######  Multiple Selection Quickpick
+![screenshot](quickpick-simple/img/multi-screenshot.png)
+
+- **Description**: A quickpick is a dropdown combobox that is opened in the Command Palette. This example shows some of the basic ways to use them.
+- **API References**:
+	- [window.showQuickPick](https://code.visualstudio.com/api/references/vscode-api#window.showQuickPick)
+	- [QuickPickItem](https://code.visualstudio.com/api/references/vscode-api#QuickPickItem)
+	- [QuickPickOptions](https://code.visualstudio.com/api/references/vscode-api#QuickPickOptions)
+- **Folder**: [quickpick-simple](#quickpick-simple).
 
 ### Treeview Simple
 
