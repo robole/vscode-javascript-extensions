@@ -109,6 +109,16 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 - **Official Guide**: [Webview guide](https://code.visualstudio.com/api/extension-guides/webview) covers a more complicated example.
 - **Folder**: [webview-simple](#webview-simple).
 
+### Codelens
+
+![screenshot](codelens/img/screenshot.png)
+
+- **Description**: A codelens represents a command that is shown inline in source code. This example adds a codelens to the document for lines of text that begin with a number.
+- **API References**:
+	- [`languages.registerCodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#languages.registerCodeLensProvider)
+	- [`CodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#CodeLensProvider)
+- **Folder**: [codelens](#codelens).
+
 ## Make a contribution
 
 If you are interested in adding an example, feel free to make a Pull Request. I prefer simpler examples with clean code. If there is a simple example for a particular part of the API, a more advanced example is good also.

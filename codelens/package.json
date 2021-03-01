@@ -11,14 +11,14 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:example.reverseText"
+    "onStartupFinished"
   ],
   "main": "src/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "example.reverseText",
-        "title": "Reverse Selected Text"
+        "command": "example.show",
+        "title": "Show codelens"
       }
     ]
   },
