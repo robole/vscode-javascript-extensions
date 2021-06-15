@@ -15,12 +15,11 @@ To try the example out:
 
 ## Understanding the API
 
-The API around this topic are quite abstract and hard to explain. I will do my best here!
+The API around this topic is quite abstract and hard to explain. I will do my best here!
 
-You don't add a codelens to a document directly. You do not need handle events to take of when they are updated.
-A codelens must be provided by a CodeLensProvider, which takes care of this for you. 
+You don't create a codelens and add it to a document directly. You do not need to handle events to take care of when a codelens is added,updated, or removed from the document. A codelens must be provided through a CodeLensProvider, which takes care of this for you.
 
-A CodeLensProvider is associated with a language through `languages.registerCodeLensProvider`. In this example it associated with all languages, and we give it out custom CodeLensProvider.
+A CodeLensProvider is associated with a programming language through `languages.registerCodeLensProvider`. In this example it associated with all languages, and we give it our custom CodeLensProvider.
 
 ```javascript
 vscode.languages.registerCodeLensProvider(
@@ -29,7 +28,7 @@ vscode.languages.registerCodeLensProvider(
 );
 ```
 
-CodeLensProvider does not have a constructor. You can create your own class (`Provider` in this example) and implement 2 functions with the same signature as per the API.
+CodeLensProvider does not have a constructor. You can create your own object (the class `Provider` in this example) and have it implement 2 functions with the same signature as per the API.
 
 ![codelensprovider definition](img/codelensprovider.png)
 
@@ -51,12 +50,23 @@ class Provider {
 ```
 
 The expectation is that:
-- `provideCodeLenses` will create the codelenses and associate them with a range in the document. These codelenses are consider unresolved as they do not have a command associated.
-- `resolveCodeLens` will associate a command with a codelens and "resolve" the codelens.
+- `provideCodeLenses` will create codelenses and associate them with a range in the document. These codelenses are considered unresolved as they do not have a command associated.
+- `resolveCodeLens` will associate a command with a codelens and "resolve" them.
 
 You can pass values from the codelens to the command by arguments.
 
-I recommend reading through the code to get a full grasp on this.
+```javascript
+let lineNum = 1;
+let text = "banana";
+
+ codeLens.command = {
+        title: "Just another Codelens",
+        command: "example.show",
+        arguments: [lineNum, text],
+};
+```
+
+I recommend reading through the code to get a complete understanding.
 
 ## VS Code API
 

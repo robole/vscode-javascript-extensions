@@ -4,7 +4,7 @@
 
 This repository contains **example extensions written in JavaScript**.
 
-The VS Code docs examples are written in TypeScript (found in [https://github.com/microsoft/vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples)). The purpose of this repo is to provide clear, simple JavaScript alternatives to these.
+The VS Code docs [examples](https://github.com/microsoft/vscode-extension-samples) are written in TypeScript. The purpose of this repo is to provide clear, simple JavaScript alternatives to these.
 
 Each folder contains a complete extension that explains one topic from the [VS Code API](https://code.visualstudio.com/api/references/vscode-api) or VS Code's [Contribution Points](https://code.visualstudio.com/api/references/contribution-points).
 
@@ -13,6 +13,8 @@ You can expect the following from each example:
 - A gif or screenshot demonstrating its usage
 - Listing of used VS Code API and Contribution Points
 - Link to a guide on VS Code website, if it has one
+
+**You can read this guide [Writing VS Code extensions in JavaScript](https://blog.logrocket.com/writing-vs-code-extensions-in-javascript/) to get up and running quickly.** It gives a clear overview of the important namespaces and breaks down some of the jargon of the API. It covers some of the examples from this repo.
 
 ## Prerequisites
 
@@ -41,8 +43,8 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 
 - **Description**: Basic example that shows an information message that says "Hello World!". It pop ups in the bottom right corner.
 - **API References**:
-	- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage) 
-- **Folder**: [helloworld-minimal](#helloworld-minimal).
+	- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)
+- **Folder**: [helloworld-minimal](/helloworld-minimal).
 
 ### Document Editing
 
@@ -51,7 +53,7 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 	- [`window.activeTextEditor`](https://code.visualstudio.com/api/references/vscode-api#window.activeTextEditor)
 	- [`TextDocument.getText`](https://code.visualstudio.com/api/references/vscode-api#TextDocument.getText)
 	- [`TextEditor.edit`](https://code.visualstudio.com/api/references/vscode-api#TextEditor.edit)
-- **Folder**: [document-editing](#document-editing).
+- **Folder**: [document-editing](/document-editing).
 
 ### Status Bar
 
@@ -60,7 +62,7 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 - **Description**: Add item to status bar (the bar at the very bottom of the window). Clicking on the item executes a command.
 - **API References**:
 	- [`window.createStatusBarItem`](https://code.visualstudio.com/api/references/vscode-api#window.createStatusBarItem)
-- **Folder**: [statusbar](#statusbar).
+- **Folder**: [statusbar](/statusbar).
 
 ### Progress
 
@@ -69,14 +71,16 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 - **Description**: Show progress message for a running task. It pop ups in the bottom right corner.
 - **API References**:
 	- [`window.withProgress`](https://code.visualstudio.com/api/references/vscode-api#window.withProgress)
-- **Folder**: [progress](#progress).
+- **Folder**: [progress](/progress).
 
 ### Quickpick Simple
 
-######  Single Selection Quickpick
+###### Single Selection Quickpick
+
 ![screenshot](quickpick-simple/img/basic-screenshot.png)
 
-######  Multiple Selection Quickpick
+###### Multiple Selection Quickpick
+
 ![screenshot](quickpick-simple/img/multi-screenshot.png)
 
 - **Description**: A quickpick is a dropdown combobox that is opened in the Command Palette. This example shows some of the basic ways to use them.
@@ -84,7 +88,7 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 	- [window.showQuickPick](https://code.visualstudio.com/api/references/vscode-api#window.showQuickPick)
 	- [QuickPickItem](https://code.visualstudio.com/api/references/vscode-api#QuickPickItem)
 	- [QuickPickOptions](https://code.visualstudio.com/api/references/vscode-api#QuickPickOptions)
-- **Folder**: [quickpick-simple](#quickpick-simple).
+- **Folder**: [quickpick-simple](/quickpick-simple).
 
 ### Treeview Simple
 
@@ -97,7 +101,7 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 	- [TreeItem](https://code.visualstudio.com/api/references/vscode-api#TreeItem)
 	- [TreeDataProvider](https://code.visualstudio.com/api/references/vscode-api#TreeDataProvider)
 - **Official Guide**: The [Treeview guide](https://code.visualstudio.com/api/extension-guides/treeview) covers a more complicated example.
-- **Folder**: [treeview-simple](#treeview-simple).
+- **Folder**: [treeview-simple](/treeview-simple).
 
 ### Webview Simple
 
@@ -107,7 +111,7 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 - **API References**:
 	- [`window.createWebviewPanel`](https://code.visualstudio.com/api/references/vscode-api#window.createWebviewPanel)
 - **Official Guide**: [Webview guide](https://code.visualstudio.com/api/extension-guides/webview) covers a more complicated example.
-- **Folder**: [webview-simple](#webview-simple).
+- **Folder**: [webview-simple](/webview-simple).
 
 ### Codelens
 
@@ -117,7 +121,7 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 - **API References**:
 	- [`languages.registerCodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#languages.registerCodeLensProvider)
 	- [`CodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#CodeLensProvider)
-- **Folder**: [codelens](#codelens).
+- **Folder**: [codelens](/codelens).
 
 ## Make a contribution
 
