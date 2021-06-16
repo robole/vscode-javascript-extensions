@@ -31,9 +31,9 @@ You need to have [Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/
 
 ## Getting Started
 
-If you want to begin at the beginning, you can read the [Your First Extension](https://code.visualstudio.com/api/get-started/your-first-extension) guide.
+In the article [Writing VS Code extensions in JavaScript](https://blog.logrocket.com/writing-vs-code-extensions-in-javascript/), I start at the beginning and discuss how to set-up a project, and create the [Hello World Minimal](helloworld-minimal) example featured here.
 
-I have added a minimal example of the boilerplate project the guide uses. It may be easier to understand - [Hello World Minimal](helloworld-minimal).
+The [Hello World Minimal](helloworld-minimal) example is the same as the boilerplate project the official guide use, but it may be easier to understand as I omit unnecessary details and code.
 
 ## Examples
 
@@ -128,3 +128,9 @@ I have added a minimal example of the boilerplate project the guide uses. It may
 If you are interested in adding an example, feel free to make a Pull Request. I prefer simpler examples with clean code. If there is a simple example for a particular part of the API, a more advanced example is good also.
 
 I refactored some of some examples from [https://github.com/microsoft/vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples). You could do the same if you wish.
+
+## Show gratitude
+
+If this helped you, please star the repos and recommend it to others. 🌟
+
+You can [buy me a coffee](https://ko-fi.com/roboleary) if you would like to support me in my quest to make more open-source software and tutorials like this.
