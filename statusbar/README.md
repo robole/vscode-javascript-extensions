@@ -2,7 +2,7 @@
 
 This extension adds a status bar entry showing the current number of selected lines. It is positioned on the left-hand-side.
 
-![Show number of selected lines](img/preview.gif)
+![Show number of selected lines](img/demo.gif)
 
 ## VS Code API References
 

@@ -1,6 +1,6 @@
 <h1 align="center">VS Code Extension Examples</h1>
 
-![banner](banner.png)
+![banner](_img/banner.png)
 
 This repository contains **example extensions written in JavaScript**.
 
@@ -18,7 +18,7 @@ You can expect the following from each example:
 
 ## Prerequisites
 
-You need to have [Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) installed on your system to run the examples. It is recommended to use the Node version used for VS Code which is documented [here](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#prerequisites).
+You need to have [Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) installed on your system to run the examples. It is recommended to use the Node version used for VS Code which is documented [here](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#prerequisites). I use node v15 and have had no issues.
 
 <u>No dev dependencies are required for building extensions.</u>  By default, Node and the VS Code API is available to use in an extension.
 
@@ -129,8 +129,12 @@ If you are interested in adding an example, feel free to make a Pull Request. I 
 
 I refactored some of some examples from [https://github.com/microsoft/vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples). You could do the same if you wish.
 
-## Show gratitude
+## Show appreciation
 
-If this helped you, please star the repos and recommend it to others. 🌟
+If this repo helped you: please star the repo 🌟 to help others find it.
 
-You can [buy me a coffee](https://ko-fi.com/roboleary) if you would like to support me in my quest to make more open-source software and tutorials like this.
+You can show your appreciation by [buying me a coffee or sponsoring me](https://ko-fi.com/roboleary). This will offer encouragement to continue making content like this.
+
+<p align="center">
+<a href="https://ko-fi.com/roboleary"><img src="_img/coffee.png" alt="buy me a coffee"></a>
+</p>
