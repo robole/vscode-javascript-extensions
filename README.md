@@ -173,4 +173,4 @@ I refactored some of some examples from [https://github.com/microsoft/vscode-ext
 
 You can show your appreciation by [buying me a coffee or sponsoring me](https://ko-fi.com/roboleary).
 
-If this repo helped you: please star the repo 🌟 to help others find it.
+You can star the repo to help others find it. 🌟
