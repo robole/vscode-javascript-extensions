@@ -18,6 +18,7 @@
     "commands": [
       {
         "command": "example.show",
+        "category": "Example",
         "title": "Show codelens"
       }
     ]

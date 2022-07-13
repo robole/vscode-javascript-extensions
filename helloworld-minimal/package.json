@@ -12,7 +12,8 @@
     "commands": [
       {
         "command": "example.helloWorld",
-        "title": "Hello World"
+        "title": "Hello World",
+        "category": "Example"
       }
     ]
   }

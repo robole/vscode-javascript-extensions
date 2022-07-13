@@ -18,6 +18,7 @@
     "commands": [
       {
         "command": "example.reverseText",
+        "category": "Example",
         "title": "Reverse Selected Text"
       }
     ]

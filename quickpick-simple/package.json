@@ -18,10 +18,12 @@
     "commands": [
       {
         "command": "example.quickpickBasic",
+        "category": "Example",
         "title": "Show Basic Quickpick"
       },
       {
         "command": "example.quickpickMany",
+        "category": "Example",
         "title": "Show Multi Quickpick"
       }
     ]

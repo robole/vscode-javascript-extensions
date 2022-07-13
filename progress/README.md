@@ -2,7 +2,7 @@
 
 This extension shows a progress task in the notification area.
 
-**Run the command "Show Progress" from the Command Palette** to kick off the progress task.
+**Run the command "Example: Show Progress" from the Command Palette** to kick off the progress task.
 
 ![Show progress in notification area](img/demo.gif)
 

@@ -17,7 +17,8 @@
     "commands": [
       {
         "command": "extension.startTask",
-        "title": "Show Progress"
+        "title": "Show Progress",
+        "category": "Example"
       }
     ]
   },

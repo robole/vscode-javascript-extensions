@@ -20,7 +20,7 @@ You can expect the following from each example:
 
 You need to have [Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) installed on your system to run the examples. It is recommended to use the Node version used for VS Code which is documented [here](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#prerequisites). I use node v15 and have had no issues.
 
-<u>No dev dependencies are required for building extensions.</u>  By default, Node and the VS Code API is available to use in an extension.
+<u>No dev dependencies are required for building extensions.</u> By default, Node and the VS Code API is available to use in an extension.
 
 ## Usage
 
@@ -37,14 +37,29 @@ The [Hello World Minimal](helloworld-minimal) example is the same as the boilerp
 
 ## Examples
 
-### Hello World Minimal
+<!-- TOC -->
+List:
+1. [Codelens](#codelens)
+1. [Document Editing](#document-editing)
+1. [Hello World Minimal](#hello-world-minimal)
+1. [Progress](#progress)
+1. [Quickpick Simple](#quickpick-simple)
+1. [Quickpick Advanced with Separator](#quickpick-advanced-with-separator)
+1. [Status Bar](#status-bar)
+1. [Treeview Simple](#treeview-simple)
+1. [Webview Simple](#webview-simple)
+<!-- /TOC -->
 
- ![screenshot](helloworld-minimal/screenshot.png)
+### Codelens
 
-- **Description**: Basic example that shows an information message that says "Hello World!". It pop ups in the bottom right corner.
+![screenshot](codelens/img/screenshot.png)
+
+- **Description**: A codelens represents a command that is shown inline in source code. This example adds a codelens to the document for lines of text that begin with a number.
 - **API References**:
-	- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)
-- **Folder**: [helloworld-minimal](/helloworld-minimal).
+	- [`languages.registerCodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#languages.registerCodeLensProvider)
+	- [`CodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#CodeLensProvider)
+- **Folder**: [codelens](/codelens).
+- **Command**: `Example: Show codelens`.
 
 ### Document Editing
 
@@ -54,15 +69,17 @@ The [Hello World Minimal](helloworld-minimal) example is the same as the boilerp
 	- [`TextDocument.getText`](https://code.visualstudio.com/api/references/vscode-api#TextDocument.getText)
 	- [`TextEditor.edit`](https://code.visualstudio.com/api/references/vscode-api#TextEditor.edit)
 - **Folder**: [document-editing](/document-editing).
+- **Command**: `Example: Reverse Selected Text`.
 
-### Status Bar
+### Hello World Minimal
 
-![screenshot](statusbar/img/screenshot.png)
+ ![screenshot](helloworld-minimal/screenshot.png)
 
-- **Description**: Add item to status bar (the bar at the very bottom of the window). Clicking on the item executes a command.
+- **Description**: Basic example that shows an information message that says "Hello World!". It pop ups in the bottom right corner.
 - **API References**:
-	- [`window.createStatusBarItem`](https://code.visualstudio.com/api/references/vscode-api#window.createStatusBarItem)
-- **Folder**: [statusbar](/statusbar).
+	- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)
+- **Folder**: [helloworld-minimal](/helloworld-minimal).
+- **Command** :`Example: Hello World`.
 
 ### Progress
 
@@ -72,23 +89,52 @@ The [Hello World Minimal](helloworld-minimal) example is the same as the boilerp
 - **API References**:
 	- [`window.withProgress`](https://code.visualstudio.com/api/references/vscode-api#window.withProgress)
 - **Folder**: [progress](/progress).
+- **Command**: `Example: Show Progress`.
 
 ### Quickpick Simple
 
-###### Single Selection Quickpick
+#### Single Selection Quickpick
 
 ![screenshot](quickpick-simple/img/basic-screenshot.png)
 
-###### Multiple Selection Quickpick
+- **Description**: A quickpick is a dropdown combobox that is opened in the Command Palette. This is allows you to select a single item.
+- **Command**: `Example: Show Basic Quickpick`.
+
+#### Multiple Selection Quickpick
 
 ![screenshot](quickpick-simple/img/multi-screenshot.png)
 
-- **Description**: A quickpick is a dropdown combobox that is opened in the Command Palette. This example shows some of the basic ways to use them.
+- **Description**: A quickpick is a dropdown combobox that is opened in the Command Palette. This example shows the ability to select multiple items.
+- **Command**: `Example: Show Multi Quickpick`.
+
+References:
 - **API References**:
 	- [window.showQuickPick](https://code.visualstudio.com/api/references/vscode-api#window.showQuickPick)
-	- [QuickPickItem](https://code.visualstudio.com/api/references/vscode-api#QuickPickItem)
 	- [QuickPickOptions](https://code.visualstudio.com/api/references/vscode-api#QuickPickOptions)
 - **Folder**: [quickpick-simple](/quickpick-simple).
+
+### Quickpick Advanced with Separator
+
+![screenshot](quickpick-advanced-separator/img/demo.png)
+
+- **Description**: A quickpick is a dropdown combobox that is opened in the Command Palette. This example shows how to create a quickpick with sections, with a horiztonal line (hard to see in my theme) and a left-aligned label. This is achieved by using a `QuickPickItem` with a `kind` of `QuickPickItemKind.Separator`.
+- **API References**:
+	- [window.createQuickPick](https://code.visualstudio.com/api/references/vscode-api#window.createQuickPick)
+	- [QuickPickItem](https://code.visualstudio.com/api/references/vscode-api#QuickPickItem)
+	- [QuickPickItemKind](https://code.visualstudio.com/api/references/vscode-api#QuickPickItem)
+	- [QuickPickOptions](https://code.visualstudio.com/api/references/vscode-api#QuickPickOptions)
+- **Folder**: [quickpick-advanced-separator](/quickpick-advanced-separator).
+- **Command**: `Example: Show Advanced Quickpick with Separator`.
+
+### Status Bar
+
+![screenshot](statusbar/img/screenshot.png)
+
+- **Description**: Add item to status bar (the bar at the very bottom of the window). Clicking on the item executes a command.
+- **API References**:
+	- [`window.createStatusBarItem`](https://code.visualstudio.com/api/references/vscode-api#window.createStatusBarItem)
+- **Folder**: [statusbar](/statusbar).
+- **Command**: None. Just run the extension to see status bar item.
 
 ### Treeview Simple
 
@@ -102,6 +148,7 @@ The [Hello World Minimal](helloworld-minimal) example is the same as the boilerp
 	- [TreeDataProvider](https://code.visualstudio.com/api/references/vscode-api#TreeDataProvider)
 - **Official Guide**: The [Treeview guide](https://code.visualstudio.com/api/extension-guides/treeview) covers a more complicated example.
 - **Folder**: [treeview-simple](/treeview-simple).
+- **Command**: None. Just run the extension.
 
 ### Webview Simple
 
@@ -112,16 +159,9 @@ The [Hello World Minimal](helloworld-minimal) example is the same as the boilerp
 	- [`window.createWebviewPanel`](https://code.visualstudio.com/api/references/vscode-api#window.createWebviewPanel)
 - **Official Guide**: [Webview guide](https://code.visualstudio.com/api/extension-guides/webview) covers a more complicated example.
 - **Folder**: [webview-simple](/webview-simple).
-
-### Codelens
-
-![screenshot](codelens/img/screenshot.png)
-
-- **Description**: A codelens represents a command that is shown inline in source code. This example adds a codelens to the document for lines of text that begin with a number.
-- **API References**:
-	- [`languages.registerCodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#languages.registerCodeLensProvider)
-	- [`CodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#CodeLensProvider)
-- **Folder**: [codelens](/codelens).
+- **Commands**:
+	- `Cat Coding: Start cat coding session`: Open the webview.
+	- `Cat Coding: Do some refactoring`: Make a refactor event to change content of webview.
 
 ## Make a contribution
 
@@ -131,10 +171,6 @@ I refactored some of some examples from [https://github.com/microsoft/vscode-ext
 
 ## Show appreciation
 
+You can show your appreciation by [buying me a coffee or sponsoring me](https://ko-fi.com/roboleary).
+
 If this repo helped you: please star the repo 🌟 to help others find it.
-
-You can show your appreciation by [buying me a coffee or sponsoring me](https://ko-fi.com/roboleary). This will offer encouragement to continue making content like this.
-
-<p align="center">
-<a href="https://ko-fi.com/roboleary"><img src="_img/coffee.png" alt="buy me a coffee"></a>
-</p>
