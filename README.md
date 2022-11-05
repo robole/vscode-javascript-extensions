@@ -62,6 +62,7 @@ List:
 	- [`CodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#CodeLensProvider)
 - **Folder**: [codelens](/codelens).
 - **Command**: `Example: Show codelens`.
+- **Activation**: When the above command is run.
 
 ### Decorator
 
@@ -72,7 +73,8 @@ List:
 	- [`TexEditor.setDecorations`](https://code.visualstudio.com/api/references/vscode-api#TextEditor.setDecorations)
 	- [`window.createTextEditorDecorationType`](https://code.visualstudio.com/api/references/vscode-api#window.createTextEditorDecorationType)
 - **Folder**: [decorator](/decorator).
-- **Command** : Not applicable. Runs on startup.
+- **Command** : Not applicable.
+- **Activation**: Runs on startup.
 
 ### Document Editing
 
@@ -83,6 +85,7 @@ List:
 	- [`TextEditor.edit`](https://code.visualstudio.com/api/references/vscode-api#TextEditor.edit)
 - **Folder**: [document-editing](/document-editing).
 - **Command**: `Example: Reverse Selected Text`.
+- **Activation**: When the above command is run.
 
 ### Hello World Minimal
 
@@ -93,6 +96,7 @@ List:
 	- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)
 - **Folder**: [helloworld-minimal](/helloworld-minimal).
 - **Command** :`Example: Hello World`.
+- **Activation**: When the above command is run.
 
 ### Hover Provider
 
@@ -103,7 +107,7 @@ List:
 	- [`vscode.languages.registerHoverProvider`](https://code.visualstudio.com/api/references/vscode-api#languages.registerHoverProvider)
 - **Folder**: [hover-provider](/hover-provider).
 - **Command** : None.
--- **Activation**: Open a JavaScript file. Hover over a word to see the hover popup.
+- **Activation**: When a JavaScript file is opened. Hover over a word in the file to see the hover popup.
 
 ### Progress
 
@@ -114,6 +118,7 @@ List:
 	- [`window.withProgress`](https://code.visualstudio.com/api/references/vscode-api#window.withProgress)
 - **Folder**: [progress](/progress).
 - **Command**: `Example: Show Progress`.
+- **Activation**: When the above command is run.
 
 ### Quickpick Simple
 
@@ -123,6 +128,7 @@ List:
 
 - **Description**: A quickpick is a dropdown combobox that is opened in the Command Palette. This is allows you to select a single item.
 - **Command**: `Example: Show Basic Quickpick`.
+- **Activation**: When the above command is run.
 
 #### Multiple Selection Quickpick
 
@@ -130,6 +136,7 @@ List:
 
 - **Description**: A quickpick is a dropdown combobox that is opened in the Command Palette. This example shows the ability to select multiple items.
 - **Command**: `Example: Show Multi Quickpick`.
+- **Activation**: When the above command is run.
 
 References:
 - **API References**:
@@ -149,6 +156,7 @@ References:
 	- [QuickPickOptions](https://code.visualstudio.com/api/references/vscode-api#QuickPickOptions)
 - **Folder**: [quickpick-advanced-separator](/quickpick-advanced-separator).
 - **Command**: `Example: Show Advanced Quickpick with Separator`.
+- **Activation**: When the above command is run.
 
 ### Status Bar
 
@@ -158,7 +166,8 @@ References:
 - **API References**:
 	- [`window.createStatusBarItem`](https://code.visualstudio.com/api/references/vscode-api#window.createStatusBarItem)
 - **Folder**: [statusbar](/statusbar).
-- **Command**: None. Just run the extension to see status bar item.
+- **Command**: None.
+- **Activation**: Whenever VS Code is open.
 
 ### Treeview Simple
 
@@ -172,7 +181,8 @@ References:
 	- [TreeDataProvider](https://code.visualstudio.com/api/references/vscode-api#TreeDataProvider)
 - **Official Guide**: The [Treeview guide](https://code.visualstudio.com/api/extension-guides/treeview) covers a more complicated example.
 - **Folder**: [treeview-simple](/treeview-simple).
-- **Command**: None. Just run the extension.
+- **Command**: None.
+- **Activation**: Whenever VS Code starts up.
 
 ### Webview Simple
 
@@ -186,6 +196,7 @@ References:
 - **Commands**:
 	- `Cat Coding: Start cat coding session`: Open the webview.
 	- `Cat Coding: Do some refactoring`: Make a refactor event to change content of webview.
+- **Activation**: When one of the commands above is executed.
 
 ## Make a contribution
 
