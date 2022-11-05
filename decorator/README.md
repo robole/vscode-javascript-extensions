@@ -41,4 +41,4 @@ If you are publishing an extension, you should consider adding more metadata. Ad
 
 - Run `npm install` on the command-line to install the dev dependencies.
 - Press <kbd>F5</kbd> to run the "Launch Extension" Debug Configuration. This will run the extension in a new VS Code window.
-- Select the command "Hello World" from the Command Palette (<kbd>Ctrl+Shift+p</kbd>). This will show a pop-up message saying "Hello World!".
+- Open up any file with numbers in it!

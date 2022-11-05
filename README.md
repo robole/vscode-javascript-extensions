@@ -43,6 +43,7 @@ List:
 1. [Decorator](#decorator)
 1. [Document Editing](#document-editing)
 1. [Hello World Minimal](#hello-world-minimal)
+1. [Hover Provider](#hover-provider)
 1. [Progress](#progress)
 1. [Quickpick Simple](#quickpick-simple)
 1. [Quickpick Advanced with Separator](#quickpick-advanced-with-separator)
@@ -92,6 +93,17 @@ List:
 	- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)
 - **Folder**: [helloworld-minimal](/helloworld-minimal).
 - **Command** :`Example: Hello World`.
+
+### Hover Provider
+
+ ![screenshot](hover-provider/img/screenshot.png)
+
+- **Description**: Creates a hover popup for every word in javascript files. It executes a command to opens the Search sidebar searching for the word you hovered over in the workspace files.
+- **API References**:
+	- [`vscode.languages.registerHoverProvider`](https://code.visualstudio.com/api/references/vscode-api#languages.registerHoverProvider)
+- **Folder**: [hover-provider](/hover-provider).
+- **Command** : None.
+-- **Activation**: Open a JavaScript file. Hover over a word to see the hover popup.
 
 ### Progress
 
