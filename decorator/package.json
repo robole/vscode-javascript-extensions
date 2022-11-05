@@ -1,0 +1,11 @@
+{
+  "name": "decorator-example",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "extension.js"
+}

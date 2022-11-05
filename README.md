@@ -40,6 +40,7 @@ The [Hello World Minimal](helloworld-minimal) example is the same as the boilerp
 <!-- TOC -->
 List:
 1. [Codelens](#codelens)
+1. [Decorator](#decorator)
 1. [Document Editing](#document-editing)
 1. [Hello World Minimal](#hello-world-minimal)
 1. [Progress](#progress)
@@ -60,6 +61,17 @@ List:
 	- [`CodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#CodeLensProvider)
 - **Folder**: [codelens](/codelens).
 - **Command**: `Example: Show codelens`.
+
+### Decorator
+
+ ![screenshot](decorator/img/screenshot.png)
+
+- **Description**: Demonstrates adding text decoration to particular parts of a document. In this case, every number is decorated with a blue border, and custom text is added to the popup when you hover over the number.
+- **API References**:
+	- [`TexEditor.setDecorations`](https://code.visualstudio.com/api/references/vscode-api#TextEditor.setDecorations)
+	- [`window.createTextEditorDecorationType`](https://code.visualstudio.com/api/references/vscode-api#window.createTextEditorDecorationType)
+- **Folder**: [decorator](/decorator).
+- **Command** : Not applicable. Runs on startup.
 
 ### Document Editing
 
