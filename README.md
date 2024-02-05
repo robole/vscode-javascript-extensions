@@ -1,18 +1,24 @@
-<h1 align="center">VS Code Extension Examples</h1>
-
-![banner](_img/banner.png)
-
-This repository contains **example extensions written in JavaScript**.
+<h1 align="center">
+  <br>
+    <img align="center" alt="The VS Code logo is surrounded by a plus symbol and an arc" src="_img/logo.png" width="200">
+  <br>
+	<br>
+  VS Code Extension Examples
+  <br>
+  <br>
+</h1>
+<h4 align="center">Example VS Code extensions written in JavaScript</h4>
+<br>
 
 The VS Code docs [examples](https://github.com/microsoft/vscode-extension-samples) are written in TypeScript. The purpose of this repo is to provide clear, simple JavaScript alternatives to these.
 
 Each folder contains a complete extension that explains one topic from the [VS Code API](https://code.visualstudio.com/api/references/vscode-api) or VS Code's [Contribution Points](https://code.visualstudio.com/api/references/contribution-points).
 
 You can expect the following from each example:
-- An explanation of its functionality
-- A gif or screenshot demonstrating its usage
-- Listing of used VS Code API and Contribution Points
-- Link to a guide on VS Code website, if it has one
+- An explanation of its functionality.
+- An animated image or screenshot demonstrating its usage.
+- Listing of used VS Code API and Contribution Points.
+- Link to a guide on VS Code website, if it has one.
 
 **You can read this guide [Writing VS Code extensions in JavaScript](https://blog.logrocket.com/writing-vs-code-extensions-in-javascript/) to get up and running quickly.** It gives a clear overview of the important namespaces and breaks down some of the jargon of the API. It covers some of the examples from this repo.
 
